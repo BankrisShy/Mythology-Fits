@@ -64,6 +64,8 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(8000, () => {
-  console.log("🚀 Server Streetwear attivo su http://localhost:8000");
+const PORT = process.env.PORT || 8000;
+
+server.listen(PORT, () => {
+  console.log(`🚀 Server Streetwear attivo sulla porta ${PORT}`);
 });
