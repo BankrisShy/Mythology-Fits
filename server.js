@@ -64,9 +64,11 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
+// Prende la porta di Render o la 8000 in locale
 const PORT = process.env.PORT || 8000;
 
-// Aggiungi "0.0.0.0" dentro il metodo listen
-server.listen(PORT, "0.0.0.0", () => {
+// Nei server 'http' nativi su Render, basta specificare solo la PORT.
+// Node.js si collegherà automaticamente a tutte le interfacce disponibili (0.0.0.0).
+server.listen(PORT, () => {
   console.log(`🚀 Server Streetwear attivo sulla porta ${PORT}`);
 });
