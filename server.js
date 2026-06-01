@@ -2,7 +2,7 @@ import "dotenv/config";
 import http from "http";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const genAI = process.env.GEMINI_API_KEY;
 
 const server = http.createServer(async (req, res) => {
   // Gestione CORS per permettere al tuo HTML di parlare con Node
