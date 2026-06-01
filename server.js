@@ -19,7 +19,7 @@ const server = http.createServer(async (req, res) => {
   }
 
   // 2. FIX: Accettiamo le richieste sulla radice "/" inviate dal tuo frontend
-  if (req.method === "POST" && (req.url === "/" || req.url === "/api/outfit")) {
+  if (req.method === "POST" && (req.url === "/" || req.url === "/api/outfit" || req.url === "/generate")) {
     let body = "";
     req.on("data", (chunk) => {
       body += chunk.toString();
