@@ -66,6 +66,7 @@ const server = http.createServer(async (req, res) => {
 
 const PORT = process.env.PORT || 8000;
 
-server.listen(PORT, () => {
+// Aggiungi "0.0.0.0" dentro il metodo listen
+server.listen(PORT, "0.0.0.0", () => {
   console.log(`🚀 Server Streetwear attivo sulla porta ${PORT}`);
 });
