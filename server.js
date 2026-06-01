@@ -44,10 +44,10 @@ const server = http.createServer(async (req, res) => {
                 non esagerare troppo con le parole e non essere troppo entusiasta.`;
 
         // 3. Manteniamo il modello "gemini-flash-latest" che avevi impostato tu
-        const model = genAI.getGenerativeModel({
-          model: "gemini-flash-latest",
-          systemInstruction: systemInstruction,
-        });
+       const model = genAI.getGenerativeModel({
+  model: "gemini-1.5-flash", // <-- Sostituisci con questo
+  systemInstruction: systemInstruction,
+});
 
         const prompt = `Analizza questo outfit per ${god}: ${JSON.stringify(cleanOutfitForAI)}. Aggiungi alla fine un link cliccabile a Google Immagini per il pezzo forte: ${cleanOutfitForAI.top}.`;
 
