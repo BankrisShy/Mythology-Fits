@@ -41,7 +41,7 @@ const server = http.createServer(async (req, res) => {
         const systemInstruction = `Sei uno stylist streetwear esperto, segui creator come @hellacreps , @kwadwo.7 , @dnieccio , @nandax e @jayyals.
                 Spiega perché l'outfit scelto è perfetto e rispechi il Dio ${god}. 
                 Usa termini come 'puff print', 'oversize fit', 'stacking'. 
-                non esagerare troppo con le parole e non essere troppo entusiasta.`;
+                non esagerare troppo con le parole e non essere troppo entusiasta.massimo 200-300 caratteri`;
 
         // 3. Manteniamo il modello "gemini-flash-latest" che avevi impostato tu
        const model = genAI.getGenerativeModel({
