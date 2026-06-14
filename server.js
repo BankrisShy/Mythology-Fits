@@ -49,7 +49,7 @@ const server = http.createServer(async (req, res) => {
   systemInstruction: systemInstruction,
 });
 
-        const prompt = `Analizza questo outfit per ${god}: ${JSON.stringify(cleanOutfitForAI)}. Aggiungi alla fine un link cliccabile a Google Immagini per il pezzo forte: ${cleanOutfitForAI.top}.`;
+        const prompt = `Analizza questo outfit per ${god}: ${JSON.stringify(cleanOutfitForAI)}.`;
 
         console.log("Inviando richiesta a Gemini...");
         const result = await model.generateContent(prompt);
