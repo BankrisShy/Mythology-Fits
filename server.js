@@ -45,7 +45,7 @@ const server = http.createServer(async (req, res) => {
 
         // 3. Manteniamo il modello "gemini-flash-latest" che avevi impostato tu
        const model = genAI.getGenerativeModel({
-  model: "gemini-flash-latest", // <-- Sostituisci con questo
+  model: "gemini-3.5-flash", 
   systemInstruction: systemInstruction,
 });
 
