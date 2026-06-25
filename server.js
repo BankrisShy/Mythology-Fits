@@ -3,8 +3,7 @@ import http from "http";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // 1. FIX: Inizializzazione corretta dell'SDK usando la tua chiave
-const aiKey = process.env.GEMINI_API_KEY;
-const genAI = new GoogleGenerativeAI(aiKey);
+const genAI = new GoogleGenAI(process.env.GEMINI_API_KEY);
 
 const server = http.createServer(async (req, res) => {
   // Gestione CORS nativa per far comunicare il frontend con Render
